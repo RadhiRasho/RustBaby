@@ -1,3 +1,6 @@
+// Desc: Sort an array using bubble sort
+// Time complexity: O(n^2) worst case
+// Time Complexity: O(n) best case
 pub fn bubble_sort(arr: &mut [i8]) {
     let mut sorted: bool = false;
     while !sorted {

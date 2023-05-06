@@ -1,3 +1,6 @@
+// Desc: Find an element in a sorted array using binary search
+// Time complexity: O(log n) worst case
+// Time Complexity: O(1) best case
 pub fn binary_search(arr: &[i8], val: i8) -> usize {
     let mut lower_bound = 0;
     let mut upper_bound = arr.len() - 1;
