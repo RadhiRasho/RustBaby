@@ -1,15 +1,4 @@
-use std::io;
-
-fn main() {
-    let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-    let mut input: String = String::new();
-    println!("Enter a number to search for: ");
-    io::stdin().read_line(&mut input).unwrap();
-    let midpoint_index = binary_search(arr, input.trim().parse().unwrap());
-    println!("Found IT!!!: {}", midpoint_index);
-}
-
-fn binary_search(arr: [i8; 10], val: i8) -> usize {
+pub fn binary_search(arr: [i8; 10], val: i8) -> usize {
     let mut lower_bound = 0;
     let mut upper_bound = arr.len() - 1;
 
