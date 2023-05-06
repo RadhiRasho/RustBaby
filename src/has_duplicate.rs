@@ -1,5 +1,8 @@
+// Desc: Find if an array has duplicate elements
+// Time complexity: O(n^2) worst case
+// Time Complexity: O(n) best case
 pub fn has_duplicate_ultra_slow(arr: &[i8]) -> bool {
-    for i in 0..arr.len() {
+    for i in 0..arr.len() - 1 {
         for j in 0..arr.len() {
             if i != j && arr[i] == arr[j] {
                 return true;
