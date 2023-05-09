@@ -16,11 +16,14 @@ pub fn bubble_sort(arr: &mut [i8]) {
 
 #[cfg(test)]
 mod tests {
+    use std::time::Instant;
+
     use super::*;
 
     #[test]
     fn test_bubble_sort() {
-        // generate more test cases
+        env_logger::init();
+        let start = Instant::now();
         for _ in 0..100 {
             let mut arr = [0; 100];
             for i in 0..100 {
@@ -31,5 +34,7 @@ mod tests {
                 assert!(arr[i] <= arr[i + 1]);
             }
         }
+        let duration = start.elapsed();
+        println!("Time taken by task: {:?}", duration);
     }
 }
